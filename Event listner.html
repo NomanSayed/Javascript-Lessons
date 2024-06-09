@@ -12,23 +12,23 @@
 
     <p id="on">...</p>
 
-    <button id="btn" onclick="buttonclick(event)">click me </button>
+    <button onclick="buttonclick(event)">click me </button>
 
     <script>
 
-      // button.addEventListener('onclick', buttonclick)
-
         function buttonclick(event) {
-
             console.log(event);
-
         }
+
+
+
 
         function loading() {
 
             setTimeout(
                 function () {
-                    document.getElementById('on').innerHTML = "loading is complete";
+                    document.getElementById('on').innerHTML =
+                     "loading is complete";
                 }, 2000);
         }
 
