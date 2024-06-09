@@ -1,0 +1,19 @@
+{
+    "employees": [
+        {
+            "name": "Shyam",
+            "imag":"linrk",
+            "email": "shyamjaiswal@gmail.com"
+        },
+        {
+            "name": "Bob",
+            "imag":"linrk",
+            "email": "bob32@gmail.com"
+        },
+        {
+            "name": "Jai",
+            "imag":"linrk",
+            "email": "jai87@gmail.com"
+        }
+    ]
+}

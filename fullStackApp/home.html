@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #post{
+
+                width: 30%;
+                height:300px;
+                margin: 3%;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+        
+
+                background-color: antiquewhite;
+            }
+            #demo{
+
+                display:flex;
+            }
+
+        </style>
+    </head>
+   
+
+<body>
+    <h1>JavaScript Promise Object</h1>
+    <h2>The then() Metod</h2>
+
+    <div id="demo"></div>
+
+    <script>
+      async  function myDisplayer(some) {
+            rep =JSON.parse(some);
+            console.log(rep);
+            info='';
+            for (let i= 0; i < rep.length; i++) {
+
+                info += `<div id="post">   
+                           <h4>${rep[i].name}</h4>
+        
+                           <p>${rep[i].id}</p>
+
+                         </div>`
+
+            }
+            
+          
+
+            document.getElementById("demo").innerHTML = await info;
+}
+
+        let myPromise = new Promise(function (myResolve, myReject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "http://localhost:3000/employees");
+            req.onload = function () {
+                if (req.status == 200) {
+                    myResolve(req.response);
+                } else {
+                    myReject("File not Found");
+                }
+            };
+            req.send();
+        });
+
+        myPromise.then(
+            function (value) { myDisplayer(value); },
+            function (error) { myDisplayer(error); }
+        );
+    </script>
+
+</body>
+
+</html>

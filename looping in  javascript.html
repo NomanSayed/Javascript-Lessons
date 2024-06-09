@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #profile{
+            width: 45px;
+            height: 45px;
+            border: black;
+            border-radius: 50%;
+        }
+        #post{
+
+            height: 500px;
+            width: 40%;
+            background-color:lightblue;
+            margin: auto;
+        }
+        #contentpic{
+            margin: 3%;
+            height: 400px;
+            width: 95%;
+        }
+    </style>
+</head>
+<body>
+   <div id="contens">
+
+   </div>
+    <script>
+       let cont="";
+       for(let i=0;i<100;i++){
+        cont+=` <div id="post">
+        <img id="profile" src="ssdd.png">
+        <b style="font-size:35px">User name ${i}</b>
+        <hr>
+        <img id="contentpic" src="dell1.jpg"alt="">
+        
+    </div>
+    <br>
+    `
+       }
+       document.getElementById('contens').innerHTML=cont;
+    </script>
+</body>
+</html>

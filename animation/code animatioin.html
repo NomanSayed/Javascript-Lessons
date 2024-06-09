@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sky{
+            background-color: lightblue;
+            height: 200px;
+            display: flex;
+    
+        }
+        .grass{
+          
+            background-color: rgb(68, 243, 68);
+            height: 200px;
+
+        }
+        .road{
+          
+            background-color: rgb(121, 117, 117);
+            height: 200px;
+          
+            border-top: 4px dashed white;
+            border-bottom: 4px dashed white;
+        }
+        .line{
+       
+            padding-top: 45%;
+            border:4px dashed white;
+
+        }
+        .sun{
+            height: 100px;
+            width: 100px;
+        
+            background-color:rgb(251, 251, 8);
+            border: 20px solid rgb(253, 253, 188);
+            border-radius: 100%;
+            margin-left: 40%;
+            
+        }
+        .car{
+            
+            animation: drive;
+            animation-duration: 4s;
+           
+            animation-iteration-count: infinite;
+
+        }
+        .bike{
+            
+            animation: drive 4s,jump 1s;
+   
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-timing-function: cubic-bezier(0.9, 0.3, 0.5, 0.5);
+            
+
+        }
+        @keyframes  drive{
+            form{transform: translateX(100px);}
+            to{transform: translateX(1700px);}
+
+        }
+        .coulds{
+            
+            position: absolute;
+        }
+        .coulds:nth-child(1){
+
+            height:150px;
+
+        }
+        .coulds:nth-child(2){
+            margin-left:900px;
+
+          height:180px;
+
+}
+        
+        @keyframes jump{
+            0%{margin-top:10px};
+            50%{margin-top:5px};
+            100%{margin-top:10px};
+        }
+        svg{
+            position: absolute;
+            margin-top: -40px;
+        }
+            
+            
+    
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+        <img src="coulds.png" alt="">
+    </div>
+    <div class="grass"> 
+        <svg height="440" width="500" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100,10 150,190 50,190" style="fill:rgb(77, 80, 77);stroke:purple;stroke-width:3" />
+          </svg>
+    </div>
+    <div class="road">
+        <img class="car" src="car.jpg">
+         <!-- <div class="line"></div>  -->
+        <br>
+        <img class="bike" src="bike.png" alt="">
+        
+
+        
+    </div>
+</body>
+</html>

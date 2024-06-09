@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+   th,td,tr,table{border: solid 2px black;
+   font-size:30px}
+</style>
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"John","lastName":"Doe" },' +
+
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+const obj = JSON.parse(text);
+tab='<table> <tr><th> first Name </th><th>last name </th></tr>'
+for(let i=0;i<obj.employees.length;i++)
+{   
+    tab+=`<tr> <td> ${obj.employees[i].firstName} </td>
+    <td> ${obj.employees[i].lastName}</td>
+    
+    </tr>
+    
+    `
+}
+tab+='</table>'
+ 
+
+console.log(tab);
+
+
+document.getElementById("demo").innerHTML =tab
+</script>
+
+</body>
+</html>

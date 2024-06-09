@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  onclick="onclickbutton()">click me </div>
+    <div id="demo"></div>
+    <script>
+        function onclickbutton(){
+           s='';
+            i=0;
+            while(i<5){
+                s+='<h1>Helo every one </h1>';
+                i++;
+
+            }
+
+            document.getElementById('demo').innerHTML=s;
+        }
+    </script>
+
+
+</body>
+</html>

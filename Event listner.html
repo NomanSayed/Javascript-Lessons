@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="loading()">
+
+
+    <p id="on">...</p>
+
+    <button id="btn" onclick="buttonclick(event)">click me </button>
+
+    <script>
+
+      // button.addEventListener('onclick', buttonclick)
+
+        function buttonclick(event) {
+
+            console.log(event);
+
+        }
+
+        function loading() {
+
+            setTimeout(
+                function () {
+                    document.getElementById('on').innerHTML = "loading is complete";
+                }, 2000);
+        }
+
+
+
+
+
+
+
+        window.addEventListener('keyup', keypress);
+        function keypress(event) {
+
+            console.log(event)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
